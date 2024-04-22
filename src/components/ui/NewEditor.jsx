@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react'
 import { FaPlus } from "react-icons/fa";
 import { cn } from '@/lib/utils';
 import Link from "next/link"
+import { usePathname } from 'next/navigation';
 const NewEditor = ({iconSize,className}) => {
     const [newUrl, setNewUrl] = useState("");
+    const pathname=usePathname();
     useEffect(() => {
-        setNewUrl(`${process.env.CLIENT_DOMAIN_NAME}/${generateRandomString(6)}`)
+        setNewUrl(`${pathname}${generateRandomString(6)}`)
         // console.log(newUrl)
     }, [])
     return (
