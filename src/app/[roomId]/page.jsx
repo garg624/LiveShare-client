@@ -72,7 +72,7 @@ export default function EditorPage({ params }) {
 
             // const ENDPOINT = "ws://localhost:3000";
             // socket.current = io(ENDPOINT, { transports: ['websocket','polling'] })
-            socket.current = io('ws://localhost:8000', { transports: ['websocket'] });
+            socket.current = io('https://socket-server-9ffg.onrender.com/', { transports: ['websocket'] });
             //? WebSockets- provide a full-duplex communication channel over a single, long-lived connection, allowing for more interactive communication between the client and server1.
             //? Polling- is a less efficient technique where the client repeatedly requests (polls) the server to check if there is new data
 

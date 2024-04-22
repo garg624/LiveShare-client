@@ -11,7 +11,7 @@ const NewEditor = ({iconSize,className}) => {
         // console.log(newUrl)
     }, [])
     return (
-        <Link target='_blank' className={cn(" md:text-6xl lg:md:text-6xl inline",className)} href={newUrl}><FaPlus className={`${iconSize}`} /></Link>
+        <Link  className={cn(" md:text-6xl lg:md:text-6xl inline",className)} href={newUrl}><FaPlus className={`${iconSize}`} /></Link>
     )
 }
 

@@ -2,7 +2,7 @@ import { Dosis, Grenze, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/ui/footer";
-
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 const grenze=Grenze({
@@ -26,7 +26,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={cn("text-4xl " , dosis.className)}>
-       
+       <NextTopLoader 
+       showSpinner={false}
+       color="#AD60F0"
+       />
         {children}
       <Footer />
       </body>
